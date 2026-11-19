@@ -2,3 +2,5 @@ fastapi>=0.115
 uvicorn[standard]>=0.30
 pytest>=8.0
 httpx>=0.27
+# Pinned on purpose: numba 0.61.x only supports Python 3.10–3.13 (no 3.14 wheels; source build refuses 3.14)
+numba==0.61.2
