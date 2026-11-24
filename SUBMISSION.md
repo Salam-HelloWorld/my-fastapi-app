@@ -1,8 +1,8 @@
 <div dir="rtl">
 
-#salam rahma
-##Task 1
-## الريبوهات
+# DevOps Homework: Salam Rahma
+
+## My repos
 
 - FastAPI:
 
@@ -16,7 +16,7 @@ https://github.com/Salam-HelloWorld/my-nestjs-app
 
 https://github.com/Salam-HelloWorld/my-laravel-app
 
-## الروابط 
+## Live URLs 
 
 - FastAPI:
 
@@ -31,6 +31,14 @@ https://my-nestjs-app-p0i9.onrender.com
 https://my-laravel-app-lzc1.onrender.com
 
 
+## Screenshots
+All screenshots folder:
+https://github.com/Salam-HelloWorld/my-fastapi-app/tree/main/screenshots
+
+
+
+
+## Answers
 
 ##1
 لأن العنوان 127.0.0.1 أو localhost بيخلي التطبيق يرد على الطلبات يلي بتجي من جوا نفس البيئة المعزولة بس، وما بيشوف الطلبات الخارجية. لما يستمع على 0.0.0.0 بيقدر يستقبل الطلبات يلي بتجي من برا عبر نظام التوجيه تبع Render.
