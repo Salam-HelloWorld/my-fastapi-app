@@ -47,4 +47,4 @@ def config() -> dict[str, str | bool]:
 
 @app.get("/health", tags=["meta"])
 def health() -> dict[str, str]:
-        raise Exception("broken on purpose")
+    return {"status": "ok"}
