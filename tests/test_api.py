@@ -56,3 +56,30 @@ def test_swagger_docs_available():
     assert "swagger-ui" in r.text
     schema = client.get("/openapi.json").json()
     assert "/items" in schema["paths"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def test_config_hides_secret(monkeypatch):
+    monkeypatch.setenv("APP_NAME", "Test App")
+    monkeypatch.setenv("WELCOME_MESSAGE", "Hello test")
+    monkeypatch.setenv("API_SECRET", "super-secret-value")
+
+    r = client.get("/config")
+    assert r.status_code == 200
+    body = r.json()
+    assert body["app_name"] == "Test App"
+    assert body["welcome_message"] == "Hello test"
+    assert body["api_secret_configured"] is True
+    assert "super-secret-value" not in r.text
+    assert "api_secret" not in body
